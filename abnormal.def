@@ -1,0 +1,11 @@
+BootStrap: localimage
+From: anaconda3_latest.sif
+#docker pull continuumio/anaconda3:latest
+
+%post
+    apt-get update
+    apt-get install -y libgl1-mesa-dev
+    apt install -y --no-install-recommends graphviz
+    conda install scikit-learn
+    conda install pytorch==1.11.0 torchvision==0.12.0 torchaudio==0.11.0 cudatoolkit=11.3 -c pytorch
+    conda install -c conda-forge efficientnet-pytorch
