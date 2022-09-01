@@ -9,12 +9,12 @@ from torch.utils.data import Dataset
 from torchvision import transforms as T
 
 
-URL = '/Users/e195718/my_effinet/abnormal_detection/data/concrete'
+URL = '/home/student/e19/e195718/abnormal/template/concrete/data/concrete'
 CLASS_NAMES = ['flow', 'fune']
 
 
 class MVTecDataset(Dataset):
-    def __init__(self, root_path='/Users/e195718/my_effinet/abnormal_detection/data', class_name='flow', is_train=True,
+    def __init__(self, root_path='/home/student/e19/e195718/abnormal/template/concrete/data', class_name='flow', is_train=True,
                  resize=256, cropsize=224):
         assert class_name in CLASS_NAMES, 'class_name: {}, should be in {}'.format(class_name, CLASS_NAMES)
         self.root_path = root_path
